@@ -1,0 +1,8 @@
+# origin: https://app.mayhem.security/mayhemheroes/pefile/fuzz-exe/17
+project: savantenvs/pefile
+target: fuzz-exe-buggy-mhh-run-17
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+cmds:
+  - cmd: /mayhem/fuzz_exe
+    libfuzzer: true
