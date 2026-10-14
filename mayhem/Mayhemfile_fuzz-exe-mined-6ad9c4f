@@ -1,0 +1,9 @@
+# seed-from: https://app.mayhem.security/savantenvs/pefile/fuzz-exe
+project: savantenvs/pefile
+target: fuzz-exe-mined-6ad9c4f
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-exe-mined-6ad9c4f/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_exe
+    libfuzzer: true
